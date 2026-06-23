@@ -1,33 +1,58 @@
 # Estrutura de Dados 1
 
-Repositório de projetos da disciplina **Estrutura de Dados 1** (3º período) — PUC Goiás.
+| | |
+|---|---|
+| **Disciplina** | Estrutura de Dados 1 (CMP1054) |
+| **Período** | 3º |
+| **Stack** | C / C++ com **Qt** (`.pro` + `qmake`) |
 
-## Projetos
+## Visão geral
 
-| Pasta / arquivo | Descrição |
-|-----------------|-----------|
-| `aula 13 - 17 - TrabalhosReentrega` | Projeto ou atividade da disciplina |
-| `aula 13 - estrutura auto referenciada - lista ligada` | Projeto ou atividade da disciplina |
-| `aula 15 - EstAutoRef - Fila` | Projeto ou atividade da disciplina |
-| `aula 17- ListaEncadeada` | Projeto ou atividade da disciplina |
-| `aula 18 - ListaEncadeadaOrdenada` | Projeto ou atividade da disciplina |
-| `aula 18 - TrabalhosReentrega` | Projeto ou atividade da disciplina |
-| `aula 19 - Árvores` | Projeto ou atividade da disciplina |
-| `aula 2` | Projeto ou atividade da disciplina |
-| `aula 4 - 6 pilha` | Projeto ou atividade da disciplina |
-| `aula 7 - 8 fila` | Projeto ou atividade da disciplina |
-| `aula 9 - 12  lista` | Projeto ou atividade da disciplina |
+Implementações clássicas de **estruturas de dados lineares** e **árvores**, com testes automatizados (`testa*.cpp`). Projetos organizados por aula, do vetor estático à árvore binária.
 
-## Tecnologias
+## Mapa de conteúdo por aula
 
-- C
-- C++
+| Pasta | Tópico | Estruturas |
+|-------|--------|------------|
+| `aula 2/` | Revisão C++ | 4 desafios (`aula2_desafio1`–`4`) |
+| `aula 4 - 6 pilha/` | Pilha | `pilha_contato`, `pilha_inteiro`, `pilha_string` |
+| `aula 7 - 8 fila/` | Fila estática | Implementações com array circular |
+| `aula 9 - 12 lista/` | Lista sequencial | Inserção, remoção, busca |
+| `aula 13 - estrutura auto referenciada` | Lista ligada | `PilhaAutoReferencia` |
+| `aula 15 - EstAutoRef - Fila` | Fila encadeada | Nós dinâmicos |
+| `aula 17- ListaEncadeada` | Lista encadeada | Operações completas |
+| `aula 18 - ListaEncadeadaOrdenada` | Lista ordenada | Inserção ordenada |
+| `aula 19 - Árvores` | Árvores | `ArvoreBipartida` e exercícios |
+| `aula 13 - 17 - TrabalhosReentrega` | Entrega | `FilaEncadeada`, `ListaEncadeada`, `PilhaEncadeada` |
 
-## Como executar
+## Projetos principais (reentrega)
 
-- **C:** Compilar com `gcc arquivo.c -o programa` ou `make` se houver Makefile.
-- **C++:** Projetos Qt: abrir `.pro` no Qt Creator ou `qmake && make`.
+| Projeto | Arquivos-chave | Descrição |
+|---------|----------------|-----------|
+| **PilhaEncadeada** | `pilha.cpp`, `testapilha.cpp` | Pilha com lista ligada |
+| **FilaEncadeada** | `fila.cpp`, `cliente.cpp` | Fila de clientes com nó dinâmico |
+| **ListaEncadeada** | `lista.cpp`, `testalista.cpp` | Lista simples com inserção/remoção |
 
+## Como executar (Qt)
+
+```bash
+cd "aula 13 - 17 - TrabalhosReentrega/FilaEncadeada"
+qmake FilaEncadeada.pro
+make
+./FilaEncadeada   # ou o nome do binário gerado
+```
+
+Alternativa: abrir o `.pro` no **Qt Creator** e executar os targets de teste.
+
+## Padrão de código
+
+- Separação `.h` / `.cpp`
+- Classes `Cliente`, `Fila`, `Pilha`, `Lista`
+- Arquivos `testa*.cpp` validam invariantes das estruturas
 ---
 
-*Origem: Google Drive → staging PUC. Repositório `puc-estrutura-dados-1` na org `puc-estudos`.*
+## Autor
+
+**Rodrigo Viana Quirino** — Ciência da Computação, PUC Goiás.
+
+Repositório privado na conta [rodviana](https://github.com/rodviana).
